@@ -1,0 +1,12 @@
+EXAMPLE	START	1000
+	LDX	ZERO	.Initialize Index Register to 0
+ADDLP	LDA	ALPHA,X	.Load Word from ALPHA into Register A
+	ADD	BETA,X	.Add Word From BETA
+	STA	GAMMA,X	.Store the Result in a work in GAMMA
+	J	ADDLP
+.
+ZERO	WORD	0
+ALPHA	RESW	100
+BETA	RESW	100
+GAMMA	RESW	100
+	END	1000
